@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfect Styled Page</title>
+  <!-- Outfit font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Your entire CSS pasted here */
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #f9f9fc;
+      color: #2c2c38;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #111427;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffd700;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1e1e2f, #34345c);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      background-color: #ffd700;
+      color: #1e1e2f;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #ffcc00;
+    }
+
+    /* Features Section */
+    .features {
+      background-color: white;
+      padding: 80px 20px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+
+    .feature {
+      background-color: #f2f3f7;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #34345c;
+    }
+
+    .feature h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #e6e9f2;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #1e1e2f;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 14px;
+      background-color: #34345c;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #1e1e2f;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #111427;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .feature i {
+        font-size: 2rem;
+      }
+
+      .contact h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">GoldenBrand</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <h1>Welcome to GoldenBrand</h1>
+      <p>Your trusted partner for innovative solutions.</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container features-grid">
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <h3>Fast Performance</h3>
+        <p>Experience lightning-fast speeds with our optimized solutions.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure</h3>
+        <p>Top-notch security features to keep your data safe and private.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-cogs"></i>
+        <h3>Customizable</h3>
+        <p>Tailor our services to perfectly fit your unique business needs.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>We are always here to help you, anytime you need assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 GoldenBrand. All rights reserved.
+  </footer>
+</body>
+</html>
